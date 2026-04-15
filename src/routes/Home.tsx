@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from "./Home.module.css"
 type RocketType = {
   id: string;
   name: string;
@@ -24,15 +25,17 @@ function App() {
   }
 
   return (
-    <div>
+    <div className={styles.aaa}>
+    <div className={styles.flex}>
       {rocket.map((value, index) => (
-        <div key={index}>
-          <h1>SpaceX</h1>
-          <div>id: {value.id}</div>
-          <div>name: {value.name}</div>
-          <div>description: {value.description}</div>
+        <div key={index} className={styles.container}>
+          <h1>SpaceX {index + 1}</h1>
+            <div>id: {value.id}</div>
+            <div>name: {value.name}</div>
+            <div>description: {value.description}</div>
         </div>
       ))}
+    </div>
     </div>
   );
 }
