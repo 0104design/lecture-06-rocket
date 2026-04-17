@@ -18,7 +18,7 @@ function Detail() {
                 setLoading(false);
             })
             .catch(err => {
-                console.log(err);
+                console.log(err, err);
                 setLoading(false);
             });
     }, [id]);
